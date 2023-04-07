@@ -25,14 +25,14 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'post_id',
       otherKey: 'category_id',
       through: PostCategory,
-    })
+    });
 
     Category.belongsToMany(BlogPost, {
       as: 'posts',
       foreignKey: 'category_id',
       otherKey: 'post_id',
       through: PostCategory,
-    })
+    });
   };
 
   return PostCategory;
