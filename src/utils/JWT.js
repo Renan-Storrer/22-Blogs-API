@@ -1,4 +1,5 @@
 const JWT = require('jsonwebtoken');
+
 const { JWT_SECRET } = process.env;
 
 const generateToken = (payload, expiresIn = '1d') => {
