@@ -19,7 +19,6 @@ const findById = async (req, res) => {
   res.status(type).json(message);
 };
 
-
 module.exports = {
   create,
   findAll,
