@@ -5,8 +5,8 @@ const create = async (req, res) => {
   if (type !== 201) return res.status(type).json({ message });
 
   res.status(type).json(message);
-}
+};
 
 module.exports = {
   create,
-}
+};
