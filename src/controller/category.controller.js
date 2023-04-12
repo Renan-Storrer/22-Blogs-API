@@ -7,6 +7,12 @@ const create = async (req, res) => {
   res.status(type).json(message);
 };
 
+const findAll = async (_req, res) => {
+  const { type, message } = await categoryService.findAll();
+  res.status(type).json(message);
+};
+
 module.exports = {
   create,
+  findAll,
 };
