@@ -66,8 +66,29 @@ const findById = async (id) => {
   return { type: 200, message: post };
 };
 
+const update = async (id, body) => {
+  const { title, content, userId } = body;
+  const postUpdate = await findById(id);
+
+  if (postUpdate.message.userId !== userId) {
+    return { type: 401, message: 'Unauthorized user' };
+  }
+
+  await BlogPost.update(
+    { title, content },
+    {
+      where: { id },
+    },
+  );
+
+  const upatedPost = await findById(id);
+
+  return { type: 200, message: upatedPost.message };
+};
+
 module.exports = {
   create,
   findAll,
   findById,
+  update,
 };
