@@ -1,4 +1,4 @@
-# [Trybe](https://www.betrybe.com/) Project - Blogs API.
+# [Trybe](https://www.betrybe.com/) Project - Blogs API
 
 ## 💻 Project
 
